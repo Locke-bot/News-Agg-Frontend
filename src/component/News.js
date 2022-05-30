@@ -15,7 +15,7 @@ import '../index.css'
 import axios from 'axios';
 
 const API = "https://locke-news-agg.herokuapp.com/";
-const noFromEach = 5;
+const noFromEach = 6;
 const Newsletter = <NewsLetter />
 
 class News extends Component {
