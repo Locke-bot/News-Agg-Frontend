@@ -10,7 +10,7 @@ import { Navigate } from "react-router-dom";
 function App(props) {
 
 	return (
-		<div className="container">
+		<div>
             <div>
                 <div>
                     <div className="tab" role="tabpanel">

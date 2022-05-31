@@ -169,11 +169,11 @@ class News extends Component {
         <body className="style-default style-rounded">
             <div className="content-overlay"></div>
             <main className="main oh text-center" id="main">
-                <section className="featured-posts-grid">
-                      <div>
+                <section className="featured-posts-grid pt-3">
+                      <div className="container">
                         <div>                
                           <div>
-                            <div className="featured-posts-grid__item featured-posts-grid__item--lg pt-0">
+                            <div className="featured-posts-grid__item featured-posts-grid__item--lg">
                                 {this.displayLatest()}
                             </div>
                           </div>          
