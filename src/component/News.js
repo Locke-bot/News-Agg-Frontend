@@ -41,12 +41,14 @@ class News extends Component {
                 <div className="row">
                     <div className="blog__content">
                         <section className="section tab-post mb-16">
-                            <div className="title-wrap title-wrap--line">
-                                <h3 className="section-title">{this.state.posts.slice(1)[item*noFromEach].name}</h3>
+                          <div className="row card-row mx-0">
+                              <div className="col-md title-wrap title-wrap--line">
+                                  <h3 className="section-title">{this.state.posts.slice(1)[item*noFromEach].name}</h3>
+                              </div>
                             </div>
                             <div className="tabs__content tabs__content-trigger tab-post__tabs-content">
                                 <div className="tabs__content-pane tabs__content-pane--active" id="tab-all">
-                                    <div className="row card-row">
+                                    <div className="row card-row mx-0">
                                         {this.display(this.state.posts.slice(1).slice(item*noFromEach, noFromEach*(item+1)))}
                                     </div>
                                 </div>
