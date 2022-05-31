@@ -11,13 +11,13 @@ import '../css/bootstrap.min.css';
 import '../css/font-icons.css';
 import '../css/style.css';
 import '../index.css'
-
+import $ from 'jquery';
 import axios from 'axios';
 
 const API = "https://locke-news-agg.herokuapp.com/";
 const noFromEach = 6;
 const Newsletter = <NewsLetter />
-
+const Tabs = {"us": 0, "ng": 1}
 class News extends Component {
 
     constructor(props){
@@ -26,14 +26,14 @@ class News extends Component {
         this.state = {
             posts
         };
+        // console.log(Tabs[this.props.code], "code", $($("a[role=tab]")[Tabs[this.props.code]]));
+        // $($("a[role=tab]")[Tabs[this.props.code]]).closest("li").addClass("active")
     }
-    
+
     addPosts(){
         if (this.state.posts == null){
             return <img src={ spinner } alt="loading..."/>
         }
-        console.log('NG', this.state.posts.length)
-        
         // the same number of articles must be taken from all newspapers
         // the Math.round is to take care of any floating point issues
         return [...Array(Math.round(this.state.posts.length-1)/noFromEach).keys()].map(
@@ -152,9 +152,8 @@ class News extends Component {
           .then(result => this.setState({
                 posts: result.data,
           })).then(result=>console.log(result))
-        
-        this.appendScript("https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js")
-        this.appendScript("https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js")
+        console.log(Tabs[this.props.code], "code", $($("a[role=tab]")[Tabs[this.props.code]]));
+        $($("a[role=tab]")[Tabs[this.props.code]]).closest("li").addClass("active")
         this.appendScript(process.env.PUBLIC_URL + "js/easing.min.js")
         this.appendScript(process.env.PUBLIC_URL + "js/owl-carousel.min.js")
         this.appendScript(process.env.PUBLIC_URL + "js/flickity.pkgd.min.js")
