@@ -1,15 +1,9 @@
-import spinner from './spinner.gif';
 import React, { Component } from 'react';
-// import "./App.css";
-// import "./AppMobile.css";
-import News from "./component/News";
-import Header from "./component/Header2";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import News from "./News";
 
-function App(props) {
-
-	return (
-		<div className="container">
+export default class Header extends Component{
+    render(){
+        return (<div className="container">
             <div>
                 <div>
                     <div className="tab" role="tabpanel">
@@ -22,19 +16,10 @@ function App(props) {
                         <a href="http://localhost:3000/ng" >Nigeria</a> */}
                         {/* Tab panes */}
                         <div className="tab-content tabs">
-							<Router>
-								<Routes>
-									<Route path={'/'} element={<News code="us" />} />
-									<Route path={'/ng'} element={<News code="ng" />} />
-									<Route path={'/us'} element={<News code="us" />} />
-								</Routes>
-							</Router>
+                            <News code={this.props.code} />
                         </div>
                     </div>
                 </div>
             </div>
-        </div>		
-	);
+        </div>)}
 }
-
-export default App;
