@@ -170,10 +170,10 @@ class News extends Component {
             <div className="content-overlay"></div>
             <main className="main oh text-center" id="main">
                 <section className="featured-posts-grid">
-                      <div className="container">
+                      <div>
                         <div>                
                           <div>
-                            <div className="featured-posts-grid__item featured-posts-grid__item--lg">
+                            <div className="featured-posts-grid__item featured-posts-grid__item--lg pt-0">
                                 {this.displayLatest()}
                             </div>
                           </div>          
