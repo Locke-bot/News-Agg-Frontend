@@ -15,7 +15,7 @@ import $ from 'jquery';
 import axios from 'axios';
 
 const API = "https://locke-news-agg.herokuapp.com/";
-const noFromEach = 10;
+const noFromEach = 12;
 const Newsletter = <NewsLetter />
 const Tabs = {"us": 0, "ng": 1}
 class News extends Component {
