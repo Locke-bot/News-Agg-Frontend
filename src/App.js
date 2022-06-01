@@ -25,7 +25,7 @@ function App(props) {
                         <div className="tab-content tabs">
 							<Router>
 								<Routes>
-									<Route path={'/'} element={<Navigate to="/us" />} />
+									<Route path={'/'} element={<Navigate to="/ng" />} />
 									<Route path={'/ng'} element={<News code="ng" />} />
 									<Route path={'/us'} element={<News code="us" />} />
 								</Routes>

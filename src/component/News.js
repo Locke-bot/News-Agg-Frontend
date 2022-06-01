@@ -15,7 +15,7 @@ import $ from 'jquery';
 import axios from 'axios';
 
 const API = "https://locke-news-agg.herokuapp.com/";
-const noFromEach = 12;
+const noFromEach = 9;
 const Newsletter = <NewsLetter />
 const Tabs = {"us": 0, "ng": 1}
 class News extends Component {
@@ -62,7 +62,10 @@ class News extends Component {
     
     display(posts){
         return posts.map(function(item){
-            return (<div className="col-md-4">
+            return (<div className="col-md-4"
+                      style={{
+                        wordBreak: "break-word",
+                      }}>
                         <article className="entry card">
                           <div className="entry__img-holder card__img-holder">
                             <a target="_blank" href={item.url}>
